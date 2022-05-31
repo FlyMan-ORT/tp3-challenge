@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    <CheckBoxPreference-->
+<!--        android:defaultValue="false"-->
+<!--        android:key="check_box_preference_1"-->
+<!--        android:title="Check box preference" />-->
+
+
+<!--    <EditTextPreference-->
+<!--        android:defaultValue="Default value"-->
+<!--        android:key="edit_text_preference_1"-->
+<!--        android:selectAllOnFocus="true"-->
+<!--        android:singleLine="true"-->
+<!--        android:title="Edit text preference" />-->
+<!--    <SwitchPreference-->
+<!--        android:defaultValue="false"-->
+<!--        android:key="switch_preference_1"-->
+<!--        android:title="Switch preference" />-->
+
+    <PreferenceCategory android:title="Mensajes">
+
+        <EditTextPreference
+            android:key="signature_string"
+            android:title="Firma para mails" />
+<!--            android:useSimpleSummaryProvider="true" -->
+
+
+        <EditTextPreference
+            android:defaultValue="'@ort.edu.ar'"
+            android:key="email_string"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Direccion de correo predeterminada" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Sincronización automática">
+
+        <SwitchPreferenceCompat
+            android:key="sync1"
+            android:title="Sincronizar base de usuarios"
+            android:summaryOff="No sincronizar"
+            android:summaryOn="Sinzcronizar"
+            />
+
+        <SwitchPreferenceCompat
+            android:dependency="sync1"
+            android:key="sync2"
+            android:summaryOff="No sincronizar"
+            android:summaryOn="Sinzcronizar"
+            android:title="Sincronizar lista de autos" />
+
+    </PreferenceCategory>
+
+
+
+
+
+</PreferenceScreen>
